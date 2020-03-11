@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0
+
+ext {
+
+    companyName = "zapper"
+    applicationName = "ZapperDisplayData"
+    versionCode = versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+    versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+
+    supportLibraryVersion = '1.0.2'
+    constraintlayout = '1.1.3'
+    lifecycleVersion = "2.1.0"
+    rxJavaVersion = '2.1.16'
+    rxAndroidVersion = '2.0.2'
+    lombokVersion = '1.18.10'
+    daggerVersion = '2.16'
+    expressoVersion = '3.1.1'
+    jUnitVersion = '4.12'
+    butterKnifeVersion = '10.2.0'
+    navigationUI = "2.1.0"
+    navigationFragment = "2.1.0"
+    material = "1.0.0"
+    retrofitVersion = '2.2.0'
+    okHttpVersion = '3.4.1'
+    testVersion = '1.1.1'
+    roomVersion = '2.2.3'
+    navigationVersion = '1.0.0-alpha05'
+    workRuntime = "1.0.0"
+}
