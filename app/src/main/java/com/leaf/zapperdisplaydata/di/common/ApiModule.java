@@ -22,7 +22,7 @@ public class ApiModule {
 
     @Provides
     @Singleton
-    PersonsUpdates providesWeatherUpdates() {
+    PersonsUpdates providesPersonUpdates() {
         return PersonsUpdateImpl.getInstance();
     }
 }

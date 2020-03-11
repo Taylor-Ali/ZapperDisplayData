@@ -28,12 +28,12 @@ public class PersonsWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        connectToWeatherAPI(PERSONS_API);
+        connectToPersonsAPI(PERSONS_API);
 
         return Worker.Result.success();
     }
 
-    void connectToWeatherAPI(String url) {
+    void connectToPersonsAPI(String url) {
 
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

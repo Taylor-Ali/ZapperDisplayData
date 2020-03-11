@@ -10,8 +10,8 @@ public class RetrofitPersonsApi implements PersonsApi {
 
     private RetrofitPersonsService retrofitPersonsService;
 
-    public RetrofitPersonsApi(RetrofitPersonsService retrofitWeatherService) {
-        this.retrofitPersonsService = retrofitWeatherService;
+    public RetrofitPersonsApi(RetrofitPersonsService retrofitPersonsService) {
+        this.retrofitPersonsService = retrofitPersonsService;
     }
 
     @Override

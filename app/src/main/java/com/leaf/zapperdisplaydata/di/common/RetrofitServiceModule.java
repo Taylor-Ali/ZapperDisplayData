@@ -13,7 +13,7 @@ public class RetrofitServiceModule {
 
     @Provides
     @Singleton
-    RetrofitPersonsService providesRetrofitWeatherService(Retrofit retrofit) {
+    RetrofitPersonsService providesRetrofitPersonsService(Retrofit retrofit) {
         return retrofit.create(RetrofitPersonsService.class);
     }
 }
