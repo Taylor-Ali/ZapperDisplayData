@@ -3,6 +3,7 @@ package com.leaf.zapperdisplaydata.data.repository.database.persons.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import lombok.Data;
 
@@ -10,6 +11,7 @@ import lombok.Data;
 @Entity(tableName = "PersonsEntity")
 public class PersonsEntity {
 
+    @PrimaryKey(autoGenerate = true)
     private Long id;
 
     @ColumnInfo(name = "personsResponse")
@@ -27,6 +29,7 @@ public class PersonsEntity {
     public PersonsEntity() {
     }
 
+    @Ignore
     public PersonsEntity(String personsResponse) {
         this.personsResponse = personsResponse;
     }
