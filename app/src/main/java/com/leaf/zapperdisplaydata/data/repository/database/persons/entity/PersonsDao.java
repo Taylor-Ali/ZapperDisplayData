@@ -12,13 +12,13 @@ import java.util.List;
 public interface PersonsDao {
 
     @Query("Select * from  PersonsEntity ORDER BY ID")
-    List<PersonsEntity> getLocations();
+    List<PersonsEntity> getPersonsEntities();
 
     @Insert
-    void addLocation(PersonsEntity personsEntity);
+    void add(PersonsEntity personsEntity);
 
     @Update
-    void updateLocation(PersonsEntity locationsEntity);
+    void update(PersonsEntity personsEntity);
 
     @Delete
     void delete(PersonsEntity personsEntity);
