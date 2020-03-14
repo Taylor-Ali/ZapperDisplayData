@@ -78,7 +78,7 @@ public class NetworkModule {
     @Singleton
     Retrofit providesRetrofit(OkHttpClient client) {
         return new Retrofit.Builder()
-                .baseUrl("http://demo9790103.mockable.io/")
+                .baseUrl("https://demo9790103.mockable.io/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

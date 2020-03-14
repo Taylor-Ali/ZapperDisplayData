@@ -1,4 +1,4 @@
-package com.leaf.zapperdisplaydata.service;
+package com.leaf.zapperdisplaydata.data.service;
 
 import android.content.Context;
 import android.util.Log;
@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-import com.leaf.zapperdisplaydata.data.remote.PersonsUpdateImpl;
+import com.leaf.zapperdisplaydata.utils.JsonUtil;
 
 import java.util.concurrent.TimeUnit;
 
@@ -64,6 +64,8 @@ public class PersonsWorker extends Worker {
                 response.close();
             }
         }
-        PersonsUpdateImpl.personsUpdateStringPublishSubject.onNext(apiCallResponse);
+        PersonsUpdateImpl.personsUpdateStringPublishSubject
+                .onNext(JsonUtil.convertFromJSONPersonResponse(apiCallResponse));
     }
+
 }

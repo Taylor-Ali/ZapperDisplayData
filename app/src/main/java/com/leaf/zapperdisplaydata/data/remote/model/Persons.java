@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import lombok.Data;
+
+@Data
 public class Persons {
 
     @SerializedName("msg")
@@ -12,4 +15,6 @@ public class Persons {
     @SerializedName("persons")
     private List<Person> personList;
 
+    public Persons() {
+    }
 }

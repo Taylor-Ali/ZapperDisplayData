@@ -1,8 +1,8 @@
 package com.leaf.zapperdisplaydata.di.common;
 
-import com.leaf.zapperdisplaydata.data.remote.PersonsUpdateImpl;
+import com.leaf.zapperdisplaydata.data.service.PersonsUpdateImpl;
 import com.leaf.zapperdisplaydata.data.remote.PersonsApi;
-import com.leaf.zapperdisplaydata.data.remote.PersonsUpdates;
+import com.leaf.zapperdisplaydata.data.service.PersonsUpdates;
 import com.leaf.zapperdisplaydata.data.remote.retrofit.RetrofitPersonsApi;
 import com.leaf.zapperdisplaydata.data.remote.retrofit.RetrofitPersonsService;
 

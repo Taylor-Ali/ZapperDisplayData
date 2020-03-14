@@ -1,4 +1,4 @@
-package com.leaf.zapperdisplaydata.service;
+package com.leaf.zapperdisplaydata.data.service;
 
 import androidx.work.Constraints;
 import androidx.work.Data;

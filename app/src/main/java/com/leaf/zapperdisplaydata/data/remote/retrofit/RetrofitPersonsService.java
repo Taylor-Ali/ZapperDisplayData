@@ -5,6 +5,7 @@ import com.leaf.zapperdisplaydata.data.remote.model.Persons;
 
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface RetrofitPersonsService {
@@ -12,6 +13,6 @@ public interface RetrofitPersonsService {
     @GET("persons")
     Flowable<Persons> getPersons();
 
-    @GET("person/{id}")
+    @POST("person/{id}")
     Flowable<PersonDetails> getPersonDetails(@Path("id") int id);
 }

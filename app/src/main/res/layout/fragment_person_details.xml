@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.personsdetails.view.PersonDetailsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/container_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_container_height"
+        android:background="@color/colorAccent"
+        android:elevation="@dimen/main_container_elevation">
+
+        <RelativeLayout
+            android:id="@+id/container_image"
+            android:layout_width="@dimen/container_image_width"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/container_image_height">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/person_profile_image"
+                android:layout_width="@dimen/person_image_width"
+                android:layout_height="@dimen/person_image_height"
+                android:layout_centerVertical="true"
+                android:elevation="@dimen/person_image_elevation"
+                android:scaleType="centerInside"
+                android:src="@drawable/person_profile_image"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="@dimen/person_image_border_width" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_image"
+            android:text="@string/person_name_mock_text"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/person_name_text_size" />
+
+        <TextView
+            android:id="@+id/person_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/person_name"
+            android:text="@string/person_team_mock_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/person_team_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_below="@id/container_view"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/text_size"
+            android:padding="@dimen/small_padding"
+            android:layout_marginTop="@dimen/bio_margin_top"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/bio" />
+    </ScrollView>
+
+
+
+</RelativeLayout>

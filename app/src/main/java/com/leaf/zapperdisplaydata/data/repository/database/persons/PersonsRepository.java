@@ -1,6 +1,6 @@
 package com.leaf.zapperdisplaydata.data.repository.database.persons;
 
-import com.leaf.zapperdisplaydata.data.repository.database.persons.entity.PersonsEntity;
+import com.leaf.zapperdisplaydata.data.remote.model.Person;
 
 import java.util.List;
 
@@ -9,12 +9,12 @@ import io.reactivex.Flowable;
 
 public interface PersonsRepository {
 
-    Flowable<List<PersonsEntity>> getPersonsEntity();
+    Flowable<List<Person>> getPersons();
 
-    Completable add(PersonsEntity... personsEntities);
+    Completable add(Person person);
 
-    Completable update(PersonsEntity personsEntity);
+    Completable update(Person person);
 
-    Completable delete(PersonsEntity personsEntity);
+    Completable delete(Person person);
 
 }

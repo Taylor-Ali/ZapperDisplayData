@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha05'
         
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -50,8 +51,8 @@ ext {
     expressoVersion = '3.1.1'
     jUnitVersion = '4.12'
     butterKnifeVersion = '10.2.0'
-    navigationUI = "2.1.0"
-    navigationFragment = "2.1.0"
+    navigationUI = "2.2.0"
+    navigationFragment = "2.2.0"
     material = "1.0.0"
     retrofitVersion = '2.2.0'
     okHttpVersion = '3.4.1'
@@ -59,4 +60,5 @@ ext {
     roomVersion = '2.2.3'
     navigationVersion = '1.0.0-alpha05'
     workRuntime = "1.0.0"
+    circularImageView = '3.2.0'
 }

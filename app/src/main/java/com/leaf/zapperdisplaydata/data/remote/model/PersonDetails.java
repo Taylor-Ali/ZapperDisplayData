@@ -2,16 +2,19 @@ package com.leaf.zapperdisplaydata.data.remote.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Data;
+
+@Data
 public class PersonDetails {
 
-    @SerializedName("name")
-    private Integer id;
-
-    @SerializedName("name")
+    @SerializedName("person")
     private String name;
 
-    public PersonDetails(Integer id, String name) {
-        this.id = id;
+    @SerializedName("team")
+    private String team;
+
+    public PersonDetails(String name, String team) {
         this.name = name;
+        this.team = team;
     }
 }

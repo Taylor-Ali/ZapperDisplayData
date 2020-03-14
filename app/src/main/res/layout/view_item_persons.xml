@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/person_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingTop="@dimen/row_padding"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingBottom="@dimen/row_padding">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/thumbnail"
+        android:layout_height="@dimen/thumbnail"
+        android:layout_centerVertical="true"
+        android:elevation="@dimen/person_image_elevation"
+        android:scaleType="centerInside"
+        android:src="@drawable/person_profile_image"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="@dimen/person_image_border_width"
+        android:layout_marginRight="@dimen/row_padding" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/thumbnail"
+        android:text="@string/persons_test_name"
+        android:layout_marginTop="@dimen/persons_name_text_margin_top"
+        android:layout_marginBottom="@dimen/persons_name_text_margin_bottom"
+        android:textSize="@dimen/persons_name"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

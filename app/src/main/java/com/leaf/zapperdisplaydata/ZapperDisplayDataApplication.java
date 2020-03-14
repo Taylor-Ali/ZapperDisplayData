@@ -1,6 +1,7 @@
 package com.leaf.zapperdisplaydata;
 
 import android.app.Application;
+import android.os.StrictMode;
 
 import com.leaf.zapperdisplaydata.di.ApplicationComponent;
 import com.leaf.zapperdisplaydata.di.DaggerApplicationComponent;
@@ -15,8 +16,18 @@ public class ZapperDisplayDataApplication extends Application {
         super.onCreate();
 
         setupDependencyInjection();
+        setupStrictMode();
 
     }
+
+    private void setupStrictMode() {
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
+
+    }
+
 
     private void setupDependencyInjection() {
         component = DaggerApplicationComponent.builder()

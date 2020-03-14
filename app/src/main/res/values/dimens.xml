@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="row_padding">10dp</dimen>
+    <dimen name="thumbnail">40dp</dimen>
+
+    <!--Persons -->
+
+    <dimen name="text_layout_margin_bottom">8dp</dimen>
+    <dimen name="text_layout_margin_top">8dp</dimen>
+    <dimen name="btn_add_padding">16dp</dimen>
+    <dimen name="btn_add_margin_bottom">24dp</dimen>
+    <dimen name="btn_add_margin_top">24dp</dimen>
+
+    <!--Person Details -->
+
+    <dimen name="persons_name">16sp</dimen>
+    <dimen name="coordinates">12sp</dimen>
+    <dimen name="options_icon_margin_right">8dp</dimen>
+    <dimen name="option_icon_margin_left">8dp</dimen>
+    <dimen name="container_image_width">90dp</dimen>
+    <dimen name="main_container_elevation">2dp</dimen>
+    <dimen name="main_container_height">200dp</dimen>
+    <dimen name="container_image_height">16dp</dimen>
+    <dimen name="person_image_width">90dp</dimen>
+    <dimen name="person_image_height">90dp</dimen>
+    <dimen name="person_image_elevation">2dp</dimen>
+    <dimen name="person_image_border_with">2dp</dimen>
+    <dimen name="person_image_border_width">2dp</dimen>
+    <dimen name="person_team_text_size">16sp</dimen>
+    <dimen name="person_name_text_size">20sp</dimen>
+    <dimen name="persons_name_text_margin_top">10dp</dimen>
+    <dimen name="persons_name_text_margin_bottom">10dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="bio_margin_top">16dp</dimen>
+
+</resources>

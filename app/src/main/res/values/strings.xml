@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ZapperDisplayData</string>
+    <string name="person_name_mock_text">Person Name</string>
+    <string name="person_team_mock_text">Persons Team</string>
+    <string name="persons_test_name">Test Name</string>
+
+
+    <string name="bio">
+        New York Times and USA Today bestselling author of historical romance. Her books have
+        received starred reviews in Publishers Weekly and Booklist.
+        \n\nCourtney lives in the Rocky Mountains with her husband, a medium-sized dog, and an attack cat.
+        Before she started writing historical romance, she experimented with various occupations:
+        computer programming, dog-training, scientificating.
+        But her favorite job is the one she’s now doing full time — writing romance.
+        \n\nIf you want to know when Courtney’s next book will come out, please visit her website at
+        http://www.courtneymilan.com, where you can sign up to receive an email when she has her
+        next release.\n</string>
+
 </resources>

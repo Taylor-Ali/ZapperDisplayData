@@ -11,18 +11,16 @@ import lombok.Data;
 @Entity(tableName = "PersonsEntity")
 public class PersonsEntity {
 
-    @PrimaryKey(autoGenerate = true)
-    private Long id;
+    @PrimaryKey(autoGenerate = false)
+    private Integer id;
 
-    @ColumnInfo(name = "personsResponse")
-    private String personsResponse;
-
-    //TODO: Replace with a TypeConverter  https://developer.android.com/training/data-storage/room/referencing-data
+    @ColumnInfo(name = "person_name")
+    private String personsName;
 
 
-    public PersonsEntity(Long id, String personsResponse) {
+    public PersonsEntity(Integer id, String personsName) {
         this.id = id;
-        this.personsResponse = personsResponse;
+        this.personsName = personsName;
     }
 
     @Ignore
@@ -30,7 +28,7 @@ public class PersonsEntity {
     }
 
     @Ignore
-    public PersonsEntity(String personsResponse) {
-        this.personsResponse = personsResponse;
+    public PersonsEntity(String personsName) {
+        this.personsName = personsName;
     }
 }

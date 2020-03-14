@@ -1,4 +1,6 @@
-package com.leaf.zapperdisplaydata.data.remote;
+package com.leaf.zapperdisplaydata.data.service;
+
+import com.leaf.zapperdisplaydata.data.remote.model.Persons;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -7,7 +9,7 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.PublishSubject;
 
 public class PersonsUpdateImpl implements PersonsUpdates {
-    public static PublishSubject<String> personsUpdateStringPublishSubject = PublishSubject.create();
+    public static PublishSubject<Persons> personsUpdateStringPublishSubject = PublishSubject.create();
 
     static PersonsUpdateImpl instance;
 
@@ -22,7 +24,7 @@ public class PersonsUpdateImpl implements PersonsUpdates {
     }
 
     @Override
-    public Flowable<String> onPersonsUpdate() {
+    public Flowable<Persons> onPersonsUpdate() {
         return personsUpdateStringPublishSubject
                 .toFlowable(BackpressureStrategy.LATEST)
                 .subscribeOn(Schedulers.io())

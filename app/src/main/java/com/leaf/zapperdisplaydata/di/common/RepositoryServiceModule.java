@@ -24,8 +24,7 @@ public class RepositoryServiceModule {
 
     @Provides
     @Singleton
-    PersonsRepository providesPersonsRepository(LocalDatabase localDatabase,
-                                                  DatabasePreferences databasePreferences) {
-        return new PersonsRepositoryImpl(localDatabase, databasePreferences);
+    PersonsRepository providesPersonsRepository(LocalDatabase localDatabase) {
+        return new PersonsRepositoryImpl(localDatabase);
     }
 }
