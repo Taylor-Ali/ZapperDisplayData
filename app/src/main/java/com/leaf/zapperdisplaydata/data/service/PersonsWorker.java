@@ -19,7 +19,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class PersonsWorker extends Worker {
 
     private String apiCallResponse;
-    private static final String PERSONS_API = "http://demo9790103.mockable.io/persons";
+    private static final String PERSONS_API = "https://demo9790103.mockable.io/persons";
 
     public PersonsWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);

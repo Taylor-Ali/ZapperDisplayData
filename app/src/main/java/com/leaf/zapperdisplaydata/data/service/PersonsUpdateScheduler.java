@@ -9,6 +9,8 @@ import androidx.work.WorkManager;
 import java.util.concurrent.TimeUnit;
 
 public class PersonsUpdateScheduler {
+    private static final int INTERVAL = 15;
+
     public static void setupPeriodicWork() {
 
         Constraints myConstraints = new Constraints.Builder()
@@ -24,7 +26,7 @@ public class PersonsUpdateScheduler {
                 .build();
 
         PeriodicWorkRequest periodicWorkRequest =
-                new PeriodicWorkRequest.Builder(PersonsWorker.class, 30, TimeUnit.MINUTES)
+                new PeriodicWorkRequest.Builder(PersonsWorker.class, INTERVAL, TimeUnit.MINUTES)
                         .setConstraints(myConstraints)
                         .setInputData(source)
                         .build();

@@ -1,7 +1,5 @@
 package com.leaf.zapperdisplaydata.data;
 
-import android.util.Log;
-
 import com.leaf.zapperdisplaydata.data.remote.PersonsApi;
 import com.leaf.zapperdisplaydata.data.remote.model.Person;
 import com.leaf.zapperdisplaydata.data.remote.model.PersonDetails;
@@ -43,8 +41,7 @@ public class PersonDataLayerImpl implements PersonsDataLayer {
 
     @Override
     public void init() {
-
-        subscribeToPersonsFromRemoteUpdates();
+        subscribeToOnPersonsUpdate();
     }
 
     @Override
@@ -57,10 +54,7 @@ public class PersonDataLayerImpl implements PersonsDataLayer {
         return Flowable.create(emitter -> {
 
             List<Person> personList = new ArrayList<>();
-
-
             if (checkIfDatabaseIsLoadedAndLoadItWithData()) {
-                Log.v(PersonDataLayerImpl.class.getSimpleName(), "checkIfDatabaseIsLoadedAndLoadItWithData");
                 personList = getPersonsFromRepository();
             } else {
                 personList = getPersonsFromRemote();
@@ -77,8 +71,18 @@ public class PersonDataLayerImpl implements PersonsDataLayer {
     }
 
     @Override
-    public Flowable<String> onPersonsUpdate() {
-        return null;
+    public void subscribeToOnPersonsUpdate() {
+        addDataLayerSubscription(
+                personsUpdates.onPersonsUpdate()
+                        .subscribe(persons -> {
+
+                            List<Person> personList = persons.getPersonList();
+
+                            for (Person person : personList) {
+                                updatePersonsDatabase(person);
+                            }
+
+                        }, Throwable::printStackTrace));
     }
 
     @Override
@@ -124,21 +128,6 @@ public class PersonDataLayerImpl implements PersonsDataLayer {
 
         return personsRepository.getPersons().blockingFirst();
     }
-
-
-    private void subscribeToPersonsFromRemoteUpdates() {
-        addDataLayerSubscription(
-                personsUpdates.onPersonsUpdate()
-                        .subscribe(persons -> {
-                            List<Person> personList = persons.getPersonList();
-
-                            for (Person person : personList) {
-                                updatePersonsDatabase(person);
-                            }
-                        }, Throwable::printStackTrace));
-
-    }
-
 
     private void addPersonsToDatabase(Person person) {
         addDataLayerSubscription(

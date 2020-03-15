@@ -3,6 +3,7 @@ package com.leaf.zapperdisplaydata;
 import android.app.Application;
 import android.os.StrictMode;
 
+import com.leaf.zapperdisplaydata.data.service.PersonsUpdateScheduler;
 import com.leaf.zapperdisplaydata.di.ApplicationComponent;
 import com.leaf.zapperdisplaydata.di.DaggerApplicationComponent;
 import com.leaf.zapperdisplaydata.di.common.AndroidModule;
@@ -16,7 +17,10 @@ public class ZapperDisplayDataApplication extends Application {
         super.onCreate();
 
         setupDependencyInjection();
+
         setupStrictMode();
+
+        PersonsUpdateScheduler.setupPeriodicWork();
 
     }
 

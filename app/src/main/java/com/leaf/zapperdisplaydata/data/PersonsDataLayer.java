@@ -18,7 +18,7 @@ public interface PersonsDataLayer {
 
     Flowable<PersonDetails> getPersonDetails(Integer id);
 
-    Flowable<String> onPersonsUpdate();
+    void  subscribeToOnPersonsUpdate();
 
     boolean checkIfDatabaseIsLoadedAndLoadItWithData();
 
@@ -27,7 +27,6 @@ public interface PersonsDataLayer {
     void addDataLayerSubscription(Disposable disposable);
 
     void clearDataLayerSubscription();
-
 
 }
 
